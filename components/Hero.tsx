@@ -76,27 +76,37 @@ const Hero = () => {
              height: 80vh; 
              justify-content: center; 
              text-align: center; 
-             align-items: flex-end;
+             align-items: center; /* Center vertically too */
              background-position: center;
            }
            .hero-content { 
-             padding: 0 20px 60px 20px; 
+             padding: 0 20px; 
              width: 100%;
+             max-width: 100%;
+             left: 0;
            }
-           h1 { font-size: 48px; }
+           h1 { 
+             font-size: 48px; 
+             word-wrap: break-word; /* Ensure text wraps */
+           }
            .cta-group { justify-content: center; }
         }
         @media (max-width: 480px) {
            .hero { 
-             height: 70vh;
+             height: 100vh; /* Full height on mobile */
+             align-items: center;
+             display: flex;
+             justify-content: center;
            }
            .hero-content { 
-             padding: 0 16px 40px 16px; 
+             padding: 0 16px; 
+             width: 100%;
            }
            h1 { 
-             font-size: 36px;
-             letter-spacing: -1px;
+             font-size: 32px; /* Smaller font */
+             letter-spacing: -0.5px;
              margin-bottom: 12px;
+             line-height: 1.2;
            }
            .subtitle { 
              font-size: 14px;
@@ -106,10 +116,12 @@ const Hero = () => {
              flex-direction: column;
              gap: 12px;
              width: 100%;
+             max-width: 200px; /* Limit button width */
+             margin: 0 auto; /* Center buttons */
            }
            .cta-btn {
              width: 100%;
-             padding: 14px 24px;
+             padding: 12px 20px;
              font-size: 12px;
            }
         }

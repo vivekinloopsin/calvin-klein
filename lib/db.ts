@@ -2,9 +2,8 @@ import mongoose from 'mongoose';
 
 const MONGODB_URI = process.env.MONGODB_URI;
 
-if (!MONGODB_URI) {
-    throw new Error('Please define the MONGODB_URI environment variable inside .env.local');
-}
+// Only check for MONGODB_URI at runtime, not during build
+// Vercel environment variables are available at runtime but not during build for static pages
 
 interface MongooseCache {
     conn: typeof mongoose | null;
@@ -22,6 +21,11 @@ if (!cached) {
 }
 
 async function dbConnect() {
+    // Check for MONGODB_URI at runtime when actually connecting
+    if (!MONGODB_URI) {
+        throw new Error('Please define the MONGODB_URI environment variable');
+    }
+
     if (cached.conn) {
         return cached.conn;
     }

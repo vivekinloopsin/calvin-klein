@@ -46,6 +46,19 @@ const ProductCard = ({ product }: { product: Product }) => {
             font-weight: 600;
             color: #212529;
         }
+        
+        @media (max-width: 480px) {
+            .info { font-size: 12px; }
+            h3 { font-size: 13px; }
+            .price { font-size: 13px; }
+            .image-container { margin-bottom: 8px; }
+        }
+        
+        @media (max-width: 360px) {
+            .info { font-size: 11px; }
+            h3 { font-size: 12px; }
+            .price { font-size: 12px; }
+        }
       `}</style>
         </Link>
     );

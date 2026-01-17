@@ -20,6 +20,17 @@ export default function AccountOverview() {
                     color: #666;
                     line-height: 1.6;
                 }
+                
+                @media (max-width: 480px) {
+                    .overview { padding: 16px 0; }
+                    h2 { font-size: 20px; margin-bottom: 12px; }
+                    p { font-size: 13px; }
+                }
+                
+                @media (max-width: 360px) {
+                    h2 { font-size: 18px; }
+                    p { font-size: 12px; }
+                }
              `}</style>
         </div>
     );

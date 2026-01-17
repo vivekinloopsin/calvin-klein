@@ -49,9 +49,7 @@ const Navbar = () => {
   return (
     <header className="navbar-wrapper">
       <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
-      <div className="promo-banner">
-        <p>EXTRA 40% OFF SALE | <Link href="/women" className="underline">SHOP WOMEN</Link> <Link href="/men" className="underline">SHOP MEN</Link></p>
-      </div>
+
       <nav className="main-nav">
         <div className="nav-left">
           <button className="mobile-menu md:hidden"><Menu size={24} /></button>
@@ -113,17 +111,7 @@ const Navbar = () => {
           background: var(--primary-bg);
           border-bottom: 1px solid #f2f2f2;
         }
-        .promo-banner {
-          background: #333333;
-          color: #ffffff;
-          text-align: center;
-          padding: 8px;
-          font-size: 11px;
-          font-weight: 600;
-          letter-spacing: 0.5px;
-        }
-        .promo-banner .underline { text-decoration: underline; margin: 0 5px; }
-        
+
         .main-nav {
           display: flex;
           justify-content: space-between;
@@ -217,6 +205,28 @@ const Navbar = () => {
         @media (max-width: 768px) {
            .main-nav { padding: 0 20px; height: 60px; }
            .logo { font-size: 20px; }
+           .nav-right { gap: 16px; }
+        }
+        
+        @media (max-width: 480px) {
+           .main-nav { padding: 0 16px; height: 56px; }
+           .logo { 
+             font-size: 18px; 
+             margin-left: 0;
+           }
+           .nav-right { gap: 12px; }
+           .icon-btn { padding: 2px; }
+           .cart-badge {
+             width: 14px;
+             height: 14px;
+             font-size: 9px;
+           }
+        }
+        
+        @media (max-width: 360px) {
+           .main-nav { padding: 0 12px; height: 52px; }
+           .logo { font-size: 16px; }
+           .nav-right { gap: 8px; }
         }
       `}</style>
     </header>

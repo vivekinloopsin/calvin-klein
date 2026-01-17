@@ -86,8 +86,51 @@ export default function AccountLayout({ children }: { children: React.ReactNode 
                     flex: 1;
                 }
                 @media (max-width: 768px) {
-                    .account-container { flex-direction: column; }
-                    .sidebar { width: 100%; margin-bottom: 40px; }
+                    .account-container { 
+                        flex-direction: column;
+                        padding: 40px 20px;
+                    }
+                    .sidebar { 
+                        width: 100%; 
+                        margin-right: 0;
+                        margin-bottom: 40px; 
+                    }
+                    .greeting h2 {
+                        font-size: 28px;
+                        margin-bottom: 24px;
+                    }
+                }
+                
+                @media (max-width: 480px) {
+                    .account-container {
+                        padding: 32px 16px;
+                    }
+                    .sidebar {
+                        margin-bottom: 32px;
+                    }
+                    .greeting h2 {
+                        font-size: 24px;
+                        margin-bottom: 20px;
+                    }
+                    .account-nav ul li {
+                        margin-bottom: 14px;
+                    }
+                    .account-nav a, .logout-btn {
+                        font-size: 13px;
+                        padding: 8px 0;
+                    }
+                }
+                
+                @media (max-width: 360px) {
+                    .account-container {
+                        padding: 24px 12px;
+                    }
+                    .greeting h2 {
+                        font-size: 22px;
+                    }
+                    .account-nav a, .logout-btn {
+                        font-size: 12px;
+                    }
                 }
             `}</style>
         </div>

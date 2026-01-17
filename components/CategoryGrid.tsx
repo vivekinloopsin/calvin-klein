@@ -62,6 +62,13 @@ const CategoryGrid = () => {
                     font-weight: 700;
                     margin-bottom: 16px;
                     letter-spacing: -1px;
+                    background: transparent;
+                    color: #fff;
+                    text-shadow: 0 2px 8px rgba(0,0,0,0.7), 0 4px 16px rgba(0,0,0,0.5);
+                    -webkit-box-decoration-break: clone;
+                    box-decoration-break: clone;
+                    padding: 0;
+                    margin: 0 0 16px 0;
                 }
                 .shop-link {
                     font-size: 13px;
@@ -78,6 +85,23 @@ const CategoryGrid = () => {
                 @media (max-width: 768px) {
                     .category-grid { grid-template-columns: 1fr; }
                     .category-card { height: 60vh; }
+                }
+                @media (max-width: 480px) {
+                    .category-card { 
+                        height: 50vh;
+                        min-height: 400px;
+                    }
+                    .overlay {
+                        bottom: 40px;
+                    }
+                    h3 { 
+                        font-size: 28px;
+                        margin-bottom: 12px;
+                    }
+                    .shop-link {
+                        font-size: 11px;
+                        letter-spacing: 1px;
+                    }
                 }
              `}</style>
         </section>

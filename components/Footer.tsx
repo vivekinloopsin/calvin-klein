@@ -126,9 +126,28 @@ const Footer = () => {
                 .legal-links a { color: #666; }
                 
                 @media (max-width: 768px) {
-                    .footer-columns { grid-template-columns: 1fr; gap: 40px; }
+                    .footer { padding: 60px 20px 30px; }
+                    .footer-columns { grid-template-columns: 1fr; gap: 40px; margin-bottom: 60px; }
                     .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
                     .legal-links { justify-content: center; }
+                }
+                
+                @media (max-width: 480px) {
+                    .footer { padding: 40px 16px 24px; font-size: 12px; }
+                    .footer-columns { gap: 32px; margin-bottom: 40px; }
+                    h4 { font-size: 13px; margin-bottom: 16px; }
+                    ul li { margin-bottom: 12px; }
+                    .signup-text { font-size: 12px; margin-bottom: 16px; }
+                    .email-form input { font-size: 12px; }
+                    .email-form button { font-size: 11px; }
+                    .footer-bottom { padding-top: 20px; font-size: 11px; }
+                    .legal-links { flex-direction: column; gap: 12px; }
+                }
+                
+                @media (max-width: 360px) {
+                    .footer { padding: 32px 12px 20px; font-size: 11px; }
+                    h4 { font-size: 12px; }
+                    .footer-columns { gap: 24px; }
                 }
             `}</style>
         </footer>

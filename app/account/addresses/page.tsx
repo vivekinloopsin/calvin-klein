@@ -251,6 +251,43 @@ export default function AddressesPage() {
                 .card-actions { margin-top: 20px; display: flex; gap: 16px; font-size: 12px; }
                 .edit-link { text-decoration: underline; font-weight: 600; }
                 .default-link { color: #666; text-decoration: underline; }
+                
+                @media (max-width: 768px) {
+                    .address-list { grid-template-columns: 1fr; }
+                    .form-grid { grid-template-columns: 1fr; }
+                    .full-width { grid-column: span 1; }
+                }
+                
+                @media (max-width: 480px) {
+                    .header-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+                    .section-title { font-size: 18px; }
+                    .btn-add { width: 100%; justify-content: center; font-size: 11px; padding: 10px 16px; }
+                    .address-form { padding: 16px; }
+                    .address-form h4 { font-size: 15px; margin-bottom: 16px; }
+                    .form-grid { gap: 12px; margin-bottom: 16px; }
+                    .row { grid-template-columns: 1fr; gap: 12px; }
+                    input { padding: 10px; font-size: 13px; }
+                    .tag-section { margin-bottom: 20px; }
+                    .tag-section label { font-size: 12px; }
+                    .tags { gap: 8px; }
+                    .tag-btn { padding: 6px 12px; font-size: 12px; }
+                    .form-actions { flex-direction: column-reverse; gap: 12px; }
+                    .btn-save, .btn-cancel { width: 100%; text-align: center; padding: 12px; font-size: 12px; }
+                    .address-card { padding: 16px; }
+                    .name { font-size: 14px; }
+                    .phone { font-size: 12px; }
+                    .card-actions { flex-direction: column; gap: 12px; font-size: 11px; }
+                }
+                
+                @media (max-width: 360px) {
+                    .section-title { font-size: 16px; }
+                    .btn-add { font-size: 10px; padding: 8px 12px; }
+                    .address-form { padding: 12px; }
+                    .address-form h4 { font-size: 14px; }
+                    input { padding: 8px; font-size: 12px; }
+                    .tag-btn { padding: 5px 10px; font-size: 11px; }
+                    .address-card { padding: 12px; }
+                }
             `}</style>
         </div>
     );

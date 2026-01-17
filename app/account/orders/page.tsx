@@ -88,6 +88,29 @@ export default function OrdersPage() {
                 @media (max-width: 768px) {
                     .order-header { grid-template-columns: 1fr 1fr; gap: 20px; }
                 }
+                
+                @media (max-width: 480px) {
+                    .section-title { font-size: 18px; margin-bottom: 20px; }
+                    .order-card { padding: 16px; }
+                    .order-header { 
+                        grid-template-columns: 1fr;
+                        gap: 12px;
+                        margin-bottom: 16px;
+                        padding-bottom: 16px;
+                    }
+                    .label { font-size: 10px; }
+                    .value { font-size: 13px; }
+                    .order-items { margin-bottom: 16px; font-size: 13px; }
+                    .view-details { font-size: 11px; }
+                }
+                
+                @media (max-width: 360px) {
+                    .section-title { font-size: 16px; }
+                    .order-card { padding: 12px; }
+                    .order-header { gap: 10px; }
+                    .value { font-size: 12px; }
+                    .order-items { font-size: 12px; }
+                }
             `}</style>
         </div>
     );

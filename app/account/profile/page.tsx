@@ -50,6 +50,19 @@ export default function ProfilePage() {
                     text-decoration: underline;
                     font-size: 12px;
                 }
+                
+                @media (max-width: 480px) {
+                    .section-title { font-size: 18px; margin-bottom: 24px; }
+                    .info-grid { max-width: 100%; }
+                    .field-group { margin-bottom: 20px; }
+                    label { font-size: 11px; }
+                    .input-field { padding: 10px; font-size: 14px; }
+                }
+                
+                @media (max-width: 360px) {
+                    .section-title { font-size: 16px; }
+                    .input-field { padding: 8px; font-size: 13px; }
+                }
             `}</style>
         </div>
     );

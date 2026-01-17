@@ -2,17 +2,17 @@
 import Link from 'next/link';
 
 const Hero = () => {
-    return (
-        <section className="hero">
-            <div className="hero-content">
-                <h1>NEW ARRIVALS</h1>
-                <p className="subtitle">Discover the latest collection.</p>
-                <div className="cta-group">
-                    <Link href="/women" className="cta-btn">SHOP WOMEN</Link>
-                    <Link href="/men" className="cta-btn">SHOP MEN</Link>
-                </div>
-            </div>
-            <style jsx>{`
+  return (
+    <section className="hero">
+      <div className="hero-content">
+        <h1>NEW ARRIVALS</h1>
+        <p className="subtitle">Discover the latest collection.</p>
+        <div className="cta-group">
+          <Link href="/women" className="cta-btn">SHOP WOMEN</Link>
+          <Link href="/men" className="cta-btn">SHOP MEN</Link>
+        </div>
+      </div>
+      <style jsx>{`
         .hero {
           position: relative;
           height: calc(100vh - 100px);
@@ -86,9 +86,36 @@ const Hero = () => {
            h1 { font-size: 48px; }
            .cta-group { justify-content: center; }
         }
+        @media (max-width: 480px) {
+           .hero { 
+             height: 70vh;
+           }
+           .hero-content { 
+             padding: 0 16px 40px 16px; 
+           }
+           h1 { 
+             font-size: 36px;
+             letter-spacing: -1px;
+             margin-bottom: 12px;
+           }
+           .subtitle { 
+             font-size: 14px;
+             margin-bottom: 24px;
+           }
+           .cta-group { 
+             flex-direction: column;
+             gap: 12px;
+             width: 100%;
+           }
+           .cta-btn {
+             width: 100%;
+             padding: 14px 24px;
+             font-size: 12px;
+           }
+        }
       `}</style>
-        </section>
-    );
+    </section>
+  );
 };
 
 export default Hero;
